@@ -18,6 +18,7 @@ const router = express.Router();
 //For search
 router.get("/posts/search", searchPosts); // "posts/search"
 router.get("/saved", getSavedRecipes); // Endpunkt zum Abrufen der gespeicherten Rezepte
+
 //Routes for posts
 router.get("/", getPosts);
 router.get("/:id", getPost);
@@ -47,24 +48,3 @@ router.get("/isRecipeSaved", (req, res) => {
 });
 
 export default router;
-
-/* import express from "express";
-import { 
-    addRecipe, 
-    deleteRecipe, 
-    getRecipe, 
-    getRecipes, 
-    updateRecipe,
-} from "../controllers/recipe.js";
-
-const router = express.Router();
-
-router.get("/", getRecipes);
-router.get("/:id", getRecipe);
-router.post("/", addRecipe);
-router.delete("/:id", deleteRecipe);
-router.put("/:id", updateRecipe);
-
-
-export default router;
- */
